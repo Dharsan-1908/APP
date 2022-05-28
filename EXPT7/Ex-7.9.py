@@ -1,6 +1,3 @@
-from array import array
-
-
 n = int(input("Enter the array size: "))
 ageList = []
 for i in range(0, n):
