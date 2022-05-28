@@ -1,5 +1,3 @@
 # APP
 APP lab programs
-
-[![CodeFactor](https://www.codefactor.io/repository/github/vikashpr/app-lab-dharsan-fork/badge)](https://www.codefactor.io/repository/github/vikashpr/app-lab-dharsan-fork)
-
+This repository contains APP lab programs for Lab2, Lab3, Lab4.
