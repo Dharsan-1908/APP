@@ -1,38 +1,24 @@
 class Student:
-    def __init__(self, name, age):
+
+    def __init__(self, name, age, marks):
         self.name = name
         self.age = age
+        self.marks = marks
 
-    def getMarks(self, marks):
-        self.marks = int(marks)
+    def calcAverage(self):
+        result = sum(self.marks)/len(self.marks)
+        return result
 
     def printDetails(self):
-        print(self.name)
-        print(self.age)
-        print(self.calcAvg())
-
-    def calcAvg(self):
-        Sum = sum(self.marks)
-        return Sum/len(self.marks)
+        print("Name of the student is: ", self.name)
+        print("Age of the student is: ", self.age)
+        print("Average marks got by the student is: ", self.calcAverage())
 
 
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-marks = []
+marks = (12, 14, 15, 17, 12)
 
-for i in range(0, 6):
-    print("Enter mark")
-    mark = input()
-    marks.append(mark)
-subjects = ["COA", "DAA", "OS", "DSA", "APP", "BRUH"]
+fMarks = frozenset(marks)
 
-fSubject = frozenset(subjects)
+s1 = Student("Vikash", 18, fMarks)
 
-student1 = Student(name, age)
-
-student1.getMarks(marks)
-student1.calcAvg()
-for i in subjects:
-    print(subjects[i])
-
-student1.printDetails()
+s1.printDetails()
