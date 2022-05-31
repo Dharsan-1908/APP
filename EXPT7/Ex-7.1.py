@@ -1,13 +1,9 @@
-string = input("Enter a string: ").split()
-numList = []
+from functools import reduce
 
 
-for i in string:
-    if i.isdigit():
-        numList.append(int(i))
+def fib(n): return reduce(lambda x, _: x+[x[-1]+x[-2]],
+                          range(n-2), [0, 1])
 
-length = int(len(numList))
-numList = sorted(numList)
 
-for i in (filter(lambda x: x > length, numList)):
-    print(i, end=" ")
+print(fib(5))
+
