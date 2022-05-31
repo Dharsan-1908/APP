@@ -12,10 +12,10 @@ for i in range(0, n):
     num = input()
     list2.append(int(num))
 
-addList = map(lambda x, y: x+y, list1, list2)
-subList = map(lambda x, y: x-y, list1, list2)
+addList = list(map(lambda x, y: x+y, list1, list2))
+subList = list(map(lambda x, y: x-y, list1, list2))
 
 print("Addition of two list: \n")
-print(list(addList))
+print(addList)
 print("Difference between two list \n")
-print(list(subList))
+print(subList)
