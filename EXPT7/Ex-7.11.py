@@ -1,15 +1,6 @@
-n = int(input("Enter the size of the list: "))
-list = []
+vowels = ['a', 'e', 'i', 'o', 'u']
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
 
-for i in range(0, n):
-    num = input()
-    list.append(int(num))
+vowelFilter = list(filter(lambda x: x in vowels, sequence))
 
-listSum = sum(list)
-listMax = max(list)
-
-print("Sum of list elements is: ")
-print(listSum)
-
-print("Max of list elements: ")
-print(listMax)
+print(vowelFilter)

@@ -1,6 +1,9 @@
-vowels = ['a', 'e', 'i', 'o', 'u']
-sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+n = int(input("Enter the array size: "))
+ageList = []
+for i in range(0, n):
+    age = input()
+    ageList.append(int(age))
 
-vowelFilter = list(filter(lambda x: x in vowels, sequence))
+filterArray = list(filter(lambda x: x >= 18, ageList))
 
-print(vowelFilter)
+print(filterArray)
