@@ -2,10 +2,10 @@ import socket
 
 s = socket.socket()        
 print ("Socket successfully created")
-
+host = socket.gethostname()
 port = 12345               
 
-s.bind(('', port))        
+s.bind((host, port))        
 print ("socket binded to %s" %(port))
 
 s.listen(5)    
