@@ -1,15 +1,8 @@
-from http import client
-import socket 
-c = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-print("Socket Created in client")
+import socket
 
-msg = "Hello UDP kid"
+c = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
-c.sendto(msg.encode("utf-8"), ("localhost",8080))
 
-c,addr = c.recvfrom(1024)
+msg = b"Hello world!"
 
-print(c.decode("utf-8"))
-
-c.close()
-
+c.sendto(msg,('localhost',8080))
