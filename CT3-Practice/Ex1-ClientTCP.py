@@ -10,4 +10,4 @@ c.send(bytes(name.encode()))
 
 recvData = c.recv(1024)
 
-print(recvData.decode("utf-8"))
+print(recvData.decode("utf-8"), name)
