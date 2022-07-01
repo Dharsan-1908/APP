@@ -13,5 +13,6 @@ while True:
     name = c.recv(1024)
     
     print("Connected with" , addr, name.decode("utf-8"))
-    c.send(b"Welcome to the server")
+    c.send(b"Welcome to the server ")
+    
     c.close()
